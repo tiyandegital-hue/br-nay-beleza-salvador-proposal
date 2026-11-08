@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agendamento — Nay Beleza &amp; Estética, Salvador/BA</title>
+<meta name="description" content="Agende seu horário na Nay Beleza &amp; Estética, Águas Claras, Salvador. Segunda a sábado, 09:00–18:00. Confirmação por telefone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23FF5A36'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='18' fill='%23FFF1DC' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Nay Beleza &amp; Estética — Início">
+      <span class="brand__mark">NAY<em>.</em></span>
+      <span class="brand__name" data-brand>Nay Beleza &amp; Estética</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">☰</button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="agendamento.html" aria-current="page">Agendamento</a></li>
+        <li><a href="conteudo.html">Conteúdo</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--coral header-cta" href="agendamento.html">Agendar</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <span class="ghost-word" aria-hidden="true">NAY</span>
+    <div class="wrap">
+      <p class="eyebrow">Agendamento</p>
+      <h1>Agende seu <span class="accent">horário.</span></h1>
+      <p class="lead">Segunda a sábado • 09:00–18:00 • Domingo fechado. Preencha o formulário — confirmamos por telefone.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap booking-layout">
+      <div class="form-card reveal">
+        <form id="booking-form" novalidate>
+          <h2>Solicitar agendamento</h2>
+          <p id="estilo-escolhido" hidden></p>
+          <p>Seu agendamento é uma solicitação — o salão confirma o dia e o horário por telefone.</p>
+
+          <div class="field">
+            <label for="nome">Nome completo <span class="req">*</span></label>
+            <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome completo">
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="telefone">Telefone <span class="req">*</span></label>
+            <input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(71) 98659-5586">
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="servico">Serviço <span class="req">*</span></label>
+            <select id="servico" name="servico">
+              <option value="">Escolha um serviço…</option>
+              <option>Corte</option>
+              <option>Coloração</option>
+              <option>Escova</option>
+              <option>Tratamento</option>
+              <option>Limpeza de pele</option>
+              <option>Design de sobrancelha</option>
+              <option>Depilação</option>
+              <option>Penteado</option>
+            </select>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="dia">Dia preferido <span class="req">*</span></label>
+              <input id="dia" name="dia" type="date" min="2026-11-09">
+              <p class="field__error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="horario">Horário preferido <span class="req">*</span></label>
+              <select id="horario" name="horario">
+                <option value="">Escolha…</option>
+                <option>09:00</option><option>10:00</option><option>11:00</option>
+                <option>13:00</option><option>14:00</option><option>15:00</option>
+                <option>16:00</option><option>17:00</option>
+              </select>
+              <p class="field__error" role="alert"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" name="observacoes" placeholder="Conte o que você quer — estilo da galeria, referência, alguma necessidade…"></textarea>
+          </div>
+
+          <div class="consent">
+            <input id="lgpd" name="lgpd" type="checkbox">
+            <label for="lgpd">Concordo que meus dados (nome, telefone, serviço e observações) sejam usados apenas para confirmar meu agendamento. Posso pedir a exclusão a qualquer momento.</label>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <button class="btn btn--coral" type="submit" style="width:100%">Enviar solicitação de agendamento</button>
+        </form>
+
+        <div class="form-success" id="form-success" aria-live="polite">
+          <span class="sun-disc" aria-hidden="true"></span>
+          <h3>Solicitação enviada!</h3>
+          <p>Obrigada! Recebemos sua solicitação de agendamento. O salão vai confirmar o dia e o horário por telefone. Se preferir, ligue direto: <a href="tel:+5571986595586">(71) 98659-5586</a>.</p>
+          <a class="btn btn--outline" href="index.html">Voltar ao início</a>
+        </div>
+      </div>
+
+      <aside class="contact-block reveal">
+        <h2>Fale direto com o salão</h2>
+        <div class="contact-item">
+          <span class="contact-item__label">Telefone</span>
+          <span><a href="tel:+5571986595586">(71) 98659-5586</a><br><span style="color:var(--ink-60);font-size:14px">Ligue para agendar ou confirmar um horário.</span></span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__label">Endereço</span>
+          <span>Estr. do Matadouro, Águas Claras<br>Salvador/BA — 41301-110</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__label">Horário</span>
+          <span>Segunda a sábado, 09:00–18:00<br><span style="color:var(--ink-60);font-size:14px">Domingo fechado.</span></span>
+        </div>
+        <div class="map-placeholder">
+          <div>
+            <strong>Mapa</strong>
+            <span>Águas Claras, Salvador — Estr. do Matadouro<br>(mapa a ser adicionado)</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">NAY <em>BELEZA &amp; ESTÉTICA</em></p>
+        <p style="color:rgba(255,241,220,.75);max-width:38ch">Salão de bairro em Águas Claras, Salvador — cabelo, coloração e estética.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <address>
+          Estr. do Matadouro, Águas Claras<br>
+          Salvador/BA — 41301-110<br>
+          <a href="tel:+5571986595586">(71) 98659-5586</a><br>
+          <a href="mailto:lilianecsilvasantos@gmail.com">lilianecsilvasantos@gmail.com</a>
+        </address>
+      </div>
+      <div>
+        <h4>Horário &amp; links</h4>
+        <ul>
+          <li>Seg–Sáb 09:00–18:00 · Dom fechado</li>
+          <li><a href="privacidade.html">Privacidade</a></li>
+          <li><a href="termos.html">Termos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> <span data-brand>Nay Beleza &amp; Estética</span></span>
+      <span class="demo-note">Site demo criado por Tiyan Digital</span>
+    </div>
+  </div>
+</footer>
+<a class="sticky-cta" href="agendamento.html">Agendar horário</a>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
